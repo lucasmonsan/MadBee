@@ -1,10 +1,10 @@
 <script>
-	import { isLoading } from '$lib/store';
+	import { isLoading } from '$lib/stores/triggers';
 	import { cubicInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 </script>
 
-<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- -->
 
 {#if $isLoading}
 	<section transition:fade={{ duration: 500, easing: cubicInOut }}>
@@ -21,7 +21,7 @@
 	</section>
 {/if}
 
-<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- -->
 
 <style>
 	section {

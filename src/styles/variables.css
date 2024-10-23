@@ -2,11 +2,10 @@
 	--base: min(3.75vw, 1rem);
 
 	--z-hide: -1;
-	--z-app: 1;
+	--z-map: 1;
+	--z-footer: 3;
 	--z-loading: 9;
 	--z-debug: 10;
-
-	--footer-h: calc(var(--base) * 3);
 
 	--family-1: 'Rubik', serif;
 	--family-2: 'Nunito', sans-serif;

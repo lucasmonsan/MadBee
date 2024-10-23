@@ -8,25 +8,28 @@
 	/* Imports */
 	import { page } from '$app/stores'; // para acessar a rota atual
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	/* Components */
-	import ScreenSize from '$lib/components/ScreenSize.svelte';
+	import Debug from '$lib/components/Debug.svelte';
 	import Loading from '$lib/components/Loading.svelte';
+	import GlobalUpdater from '$lib/components/GlobalUpdater.svelte';
 
 	onMount(() => {
 		const lastAccess = sessionStorage.getItem('lastAccess');
+		const today = new Date().getDate().toString();
 
-		if (!lastAccess && $page.url.pathname !== '/splash') window.location.href = '/splash'; // Redireciona para splash
+		if ((!lastAccess || parseInt(lastAccess) < parseInt(today)) && $page.url.pathname !== '/splash') goto('/splash');
 	});
 </script>
 
-<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- -->
 
 <slot />
-<!-- slot é onde o conteúdo da página será renderizado -->
 
-<!-- Componente global -->
-<ScreenSize />
+<Debug />
+<GlobalUpdater />
+
 <Loading />
 
-<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- -->
