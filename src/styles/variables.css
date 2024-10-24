@@ -25,13 +25,14 @@
 
 	--bg: #efedeb;
 	--text: #1b1b1b;
-	--comp: #292929;
-	--border: #5e5e5e;
-	--color-1: #456990;
-	--color-2: #68452e;
-	--color-3: #f45b69;
 
-	--shadow-1: rgba(46, 46, 51, 0.5) 0px var(--xs) var(--lg) 0px;
+	--white: #efedeb;
+	--comp: #383838;
+	--color-1: #5d74f1;
+	--color-2: #338f62;
+	--color-3: #ea7465;
+
+	--shadow-1: rgba(46, 46, 51, 0.25) 0px var(--xs) var(--lg) 0px;
 
 	--radius-1: var(--md);
 }
@@ -39,9 +40,4 @@
 .dark-theme {
 	--bg: #1b1b1b;
 	--text: #efedeb;
-	--comp: #292929;
-	--border: #5e5e5e;
-	--color-1: #456990;
-	--color-2: #68452e;
-	--color-3: #f45b69;
 }

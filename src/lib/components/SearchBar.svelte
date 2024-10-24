@@ -38,7 +38,7 @@
 		height: var(--xxxl);
 		padding: 0 var(--xs);
 		border-radius: var(--radius-1);
-		border: solid 2px var(--border);
+		border: solid 2px var(--comp);
 		background-color: var(--bg);
 	}
 
